@@ -1,0 +1,14 @@
+.qwe{
+    opacity: 1;
+    transition: 5s;
+    transform: translate(0);
+    transform-origin: left;
+}
+
+html.is-animating .qwe{
+    opacity: 1;
+    transform: translateX(100%);
+}
+html.is-leaving .qwe{
+    opacity: 0;
+}

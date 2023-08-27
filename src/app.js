@@ -5,27 +5,21 @@ console.log(window.innerWidth); //full window width
 window.addEventListener('resize', () =>{console.log(window.innerWidth);});
 
 
-
-// gsap configuration
-
-
+// -------------------------------------------------------------------------------------------------
+// configuration
+const swup = new Swup()
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(Flip);
 
 // gsap animations
 const tl = gsap.timeline({stagger: true})
-tl 
-    .to('.img', {
-        // opacity: 0,
-        // duration: 2,
-        // scale: 1.1,
-        // rotate:10,
-        // ease: "power2.out"
-    })
-    .to('.img', {
-        duration: 3,
-        scale: 1.05,
-        rotate: 10,
-        ease: 'power2.out'
-    })
-    .to('.img', {
-        opacity: 0
-    })
+tl  .to('.img', {duration: 3,scale: 1.05,rotate: 10,ease: 'power2.out'})
+    .to('.img', {opacity: 0});
+
+// automatic redirect
+let count = 1;
+setInterval(()=>{
+    count++
+    if(count > 6) location.replace('/src/components/home.html')
+}, 1000)
+
