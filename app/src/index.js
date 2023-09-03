@@ -28,6 +28,6 @@ tl  .to('.img', {duration: 3,scale: 1.05,rotate: 10,ease: 'power2.out'})
 let count = 1;
 setInterval(()=>{
     count++
-    if(count > 9) location.replace('/src/components/home.html')
+    if(count > 9) location.replace('/app/home.html')
 }, 1000)
 
