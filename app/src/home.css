@@ -60,25 +60,55 @@
 .nav .side .switch .switcher{
     position: absolute;
 }
+/* 
+background
+*/
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.background .pic1{
+    position: absolute;
+    width: 120%;
+    height: 240%;
+    left: -120px;
+    /* object-fit: cover; */
+    transform: rotate(20deg);
+}
+.background .pic2{
+    position: absolute;
+    width: 120%;
+    height: 240%;
+    
+    transform: rotate(-20deg);
+}
 
 /* 
     header part
 */
 .container{
-    width: 70%;
+    position: absolute;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: white;
+    mix-blend-mode: difference;
     /* background-color: white; */
 }
 .container .box{
     width: 500px;
     height: 500px;
     padding-top: 250px;
-    /* background-color: #00d062; */
+    /* background: white; */
     /* justify-content: center; */
     /* text-align: center; */
+    isolation: isolate;
 }
 .container .box h1{
     font-size: 70px;    
@@ -92,8 +122,10 @@
 .container .box h1, 
 .container .box h2{
     transition: all 0.3s ease;
+    /* isolation: isolate; */
     /* mix-blend-mode: difference; */
     /* color: blue; */
+    z-index: 10;
 }
 .container .box span{
     display: inline-block;
