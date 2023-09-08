@@ -75,7 +75,14 @@ background
     position: absolute;
     width: 120%;
     height: 240%;
-    left: -120px;
+
+    /* 2nd config */
+    /* left: -150px; */
+    /* top: -190px; */
+
+    /* 1st config */
+    left: 0px;
+    top: -600px;
     /* object-fit: cover; */
     transform: rotate(20deg);
 }
@@ -83,7 +90,13 @@ background
     position: absolute;
     width: 120%;
     height: 240%;
-    
+    /* 2nd config */
+    /* left: -60px; */
+    /* top: 400px; */
+
+    /* 1st config */
+    left: -170px;
+    top: -660px;
     transform: rotate(-20deg);
 }
 
