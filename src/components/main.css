@@ -1,0 +1,155 @@
+
+
+:root{
+    /* font family */
+    --Didact_Gothic: 'Didact Gothic', sans-serif;
+
+
+    /* color pallets */
+    /* black is black but im not gonna use this */
+    --Nero:#171717;
+    /* #1c1c1c hmmmmm */
+    --Eclipse:#404040;
+    --Gray:#7f7f7f;
+    --Silver:#bfbfbf;
+    /* white is white */
+    --Malachite: #00d062;
+    --dark_red: #990000;
+
+
+    /* arhitExpance vars */
+    --ease: cubic-bezier(0.255, 0.655, 0.02, 0.995);
+    --transition-width: width 0.64s var(--ease);
+    --transition-opacity: opacity 1.2s var(--ease);
+    --transition-transform: transform 1.2s var(--ease);
+}
+
+body{
+    margin: 0;
+    padding: 0
+}
+
+.screenSized{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.mainIntro, .introAnimation{
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+/* start arhitExpance */
+
+
+.--mobile{
+    display: none;
+}
+
+.arhitExpance{
+    display: flex;
+    width: 100%;
+    height: inherit;
+}
+
+.arhitExpance  .section_col {
+    position: relative;
+    width: 80rem;
+    border-right: var(--Malachite); /* for testing */
+    padding: 8rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    transition: var(--transition-width); 
+    overflow: hidden;
+}
+
+.arhitExpance .section_col:last-child{
+    border: none;
+}
+
+/* active var when handling animation */
+.arhitExpance .section_col.active{
+    width: 200rem;
+    transition: var(--transition-width); 
+    transform-origin: left; 
+}
+
+.arhitExpance .section_col.active .section_col_media{
+    opacity: 1;
+    transition: var(--transition-opacity); ; 
+}
+
+.arhitExpance .section_col .section_col_media{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0;
+
+    transition: var(--transition-opacity);
+}
+
+.arhitExpance .section_col .section_col_media::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:  0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    background-color: var(--Silver);
+    opacity: 0.4;
+}
+
+.arhitExpance .section_col .section_col_media img.section_col_image{
+    position: relative;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    /* object-fit: left bottom; */
+}
+
+
+.arhitExpance .section_col .section_col_caption{
+    text-align: center;
+    width: 24rem;
+}
+
+.arhitExpance .section_col .section_col_caption span{
+    font-size: 0.4rem;
+    text-transform: uppercase;
+}
+
+.arhitExpance .section_col .section_col_title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.arhitExpance .section_col .section_col_title h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.arhitExpance .section_col .section_col_title p{
+    font-size: 0.8rem;
+}
+
+.arhitExpance .section_col .section_col_number h1{
+    font-size: 12rem;
+    line-height: 0.8;
+}
+/* end arhitExpance */

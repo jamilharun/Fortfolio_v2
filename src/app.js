@@ -27,5 +27,8 @@ tl
         ease: 'power2.out'
     })
     .to('.img', {
-        opacity: 0
+        opacity: 0,
+        onComplete: () => {
+            window.location.href = "src/components/main.html"; // navigate to the next page after animation completes
+          }
     })
