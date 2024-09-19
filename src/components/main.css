@@ -27,7 +27,9 @@
 
 body{
     margin: 0;
-    padding: 0
+    padding: 0;
+    font-family: var(--Didact_Gothic);
+    /* background-color: var(--Eclipse); */
 }
 
 .screenSized{
@@ -200,6 +202,7 @@ body{
 .arhitExpance .section_col .section_col_number h1{
     font-size: 48rem;
     line-height: 0.8;
+    
 }
 
 .arhitExpance .section_col .section_col_caption span{
@@ -207,123 +210,6 @@ body{
     text-transform: uppercase;
 }
 
-/* arhitExpance media queries for laptop */
-@media screen and (max-width: 1346px) {
-    .arhitExpanceHeader .section_header_list .section_header_list_item{
-        font-size: 1rem;
-        padding: 0.25rem;
-    }
-
-    .arhitExpance .section_col .section_col_number h1{
-        font-size: 12rem;
-        /* line-height: 0.8; */
-    }
-    
-    .arhitExpance .section_col .section_col_title h2{
-        font-size: 1.5rem;
-        /* text-transform: uppercase; */
-    }
-
-    .arhitExpance .section_col .section_col_title p{
-        font-size: 0.8rem;
-    }
-
-    .arhitExpance .section_col .section_col_caption span{
-        font-size: 1.6rem;
-        text-transform: uppercase;
-    }
-
-
-}
-
-/* end arhitExpance mobile */
-
-@media screen and (max-width: 768px) {
-    html{
-        font-size: calc(100vw / 768 * 10);
-    }
-
-    .arhitExpanceHeader .section_header_list .section_header_list_item{
-        font-size: 3.2rem;
-        padding: 2rem;
-    }   
-
-    .arhitExpance .section_col .section_col_media::after{
-        background-color: transparent;
-    }
-
-    .arhitExpance .section_col .section_col_number h1{
-        font-size: 24rem;
-        /* line-height: 0.8; */
-        margin: 0;
-    }
-
-    .app{
-        padding: 1.6rem;
-    }
-    
-    .--desktop{
-        display: none;
-    }
-
-    .--mobile{
-        display: block;
-    }
-
-    .arhitExpance{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .arhitExpance .section_col{
-        width: 100%; 
-        height: calc(25vh - 3.2rem);
-        flex-direction: row;
-        align-items: flex-end;
-        padding: 2rem;
-        border-right: none;
-        border-bottom: var(--Eclipse); /*for testing*/
-    }
-
-    .arhitExpance .section_col .section_col_media {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 15rem;
-        height: 20rem;
-        z-index: -1;
-        opacity: 1;
-        flex: 0.75;
-    }
-
-
-    .arhitExpance .section_col .section_col_title {
-        flex: 1;
-        /* padding: 0 1.6rem */
-        align-items: flex-start;
-    }
-
-    /* .arhitExpance .section_col .section_col_number {
-        flex: 0.5;
-    } */
-
-
-    .arhitExpance .section_col .section_col_title h2{
-        /* font-size: 6rem;
-        text-transform: uppercase; */
-        margin-bottom: 0rem;
-        font-size: 6rem;
-    }
-
-    .arhitExpance .section_col .section_col_title p{
-        font-size: 3.2rem;
-        margin: 0;
-    }
-
-    .arhitExpance .section_col.active{
-        width: 80rem;
-    }
-}
 
 /* arhitExpance part 2 */
 /* 
@@ -342,7 +228,7 @@ body{
 .menu .menu_wrapper {
     padding: 12.6rem 4rem 4rem 4rem;
     height: inherit;
-    color: var(--Eclipse);
+    color: var(--Malachite);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -392,9 +278,9 @@ body{
     right: -2rem;   
 }
 
-.menu .menu_wrapper.menu_list .menu_list_item a {
+.menu .menu_wrapper .menu_list .menu_list_item a {
     display: block;
-    color: var(--Malachite);
+    color: var(--Silver);
     font-size: 4rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -429,27 +315,224 @@ body{
     align-items: center;
     gap: 0.6rem;
 }
-@media screen and (max-width: 1346px) {
-    /* .menu{
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 25rem;
-        height: 100vh;
-    } */
-    /* .screenSized{
-        transform: translateX(-25rem);
-    } */
 
+
+/* custom design for screen 1400p*/
+.screenSized .overlayimage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 100%; */
 }
 
-@media screen and (max-width: 768px) {
+.screenSized .overlayimage img{
+    /* width: 100%; */
+    height: 100vh;
+    opacity: 0.75;
+}
 
-    /* .screenSized{
-        transform: translateX(-50rem);
+.screenSized .introMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screenSized .introMessage .message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0;
+    /* font-family: ; */
+}
+
+.screenSized .introMessage .message:nth-child(2) {
+    /* width: 40rem; */
+    /* height: 30rem; */
+
+
+    /* background-color: #00d062; */
+}
+
+.screenSized .introMessage .message .text {
+    font-size: 3rem;
+    margin: 0;
+    opacity: 1;
+}
+
+.screenSized .introMessage .message .text .name {
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0;
+}
+
+.screenSized .introMessage .message .sentence {
+    font-size: 3rem;
+    margin: 0;
+    opacity: 0;
+}
+
+/* media queries for different screens */
+
+/* arhitExpance media queries for laptop */
+@media screen and (max-width: 1400px) {
+    /* arhitExpance part 1 */
+    .arhitExpanceHeader .section_header_list .section_header_list_item{
+        font-size: 1rem;
+        padding: 0.25rem;
+    }
+
+    .arhitExpance .section_col .section_col_number h1{
+        font-size: 12rem;
+        /* line-height: 0.8; */
+        margin-top: 5rem;
+    }
+    
+    .arhitExpance .section_col .section_col_title h2{
+        font-size: 1.5rem;
+        /* text-transform: uppercase; */
+    }
+
+    .arhitExpance .section_col .section_col_title p{
+        font-size: 0.8rem;
+    }
+
+    .arhitExpance .section_col .section_col_caption span{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    /* arhitExpance part 2 */
+    .menu{
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .menu .menu_wrapper {
+        padding: 6.6rem 4rem 4rem 4rem;
+    }
+
+    .menu .menu_wrapper .menu_list .menu_list_item a {
+        font-size: 1.5rem;
+    }
+
+    .menu_close {
+        padding: 0.5rem;
+    }
+}
+
+/* end arhitExpance mobile */
+@media screen and (max-width: 768px) {
+    /* arhitExpance part 1 */
+    html{
+        font-size: calc(100vw / 768 * 10);
+    }
+
+    .arhitExpanceHeader .section_header_list .section_header_list_item{
+        font-size: 3.2rem;
+        padding: 2rem;
+    }   
+
+    .arhitExpance .section_col .section_col_media::after{
+        background-color: transparent;
+    }
+
+    .arhitExpance .section_col .section_col_number h1{
+        font-size: 24rem;
+        /* line-height: 0.8; */
+        margin: 4rem;
+    }
+
+    .app{
+        padding: 1.6rem;
+    }
+    
+    .--desktop{
+        display: none;
+    }
+
+    .--mobile{
+        display: block;
+    }
+
+    .arhitExpance{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .arhitExpance .section_col{
+        width: 100%; 
+        /* height: calc(25vh - 3.2rem); */
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 2rem;
+        border-right: none;
+        border-bottom: var(--Eclipse); /*for testing*/
+    }
+
+    .arhitExpance .section_col .section_col_media {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 15rem;
+        height: 20rem;
+        z-index: -1;
+        opacity: 1;
+        flex: 0.75;
+    }
+
+
+    .arhitExpance .section_col .section_col_title {
+        flex: 1;
+        /* padding: 0 1.6rem */
+        align-items: flex-start;
+    }
+
+    /* .arhitExpance .section_col .section_col_number {
+        flex: 0.5;
     } */
+
+
+    .arhitExpance .section_col .section_col_title h2{
+        /* font-size: 6rem;
+        text-transform: uppercase; */
+        margin-bottom: 0rem;
+        font-size: 6rem;
+    }
+
+    .arhitExpance .section_col .section_col_title p{
+        font-size: 3.2rem;
+        margin: 0;
+    }
+
+    .arhitExpance .section_col.active{
+        width: 80rem;
+    }
+
+    /* arhitExpance part 2 */
+    .menu{
+        width: 50rem;
+        height: 70rem;
+    }
 
     .menu_close .menu_close_item {
         font-size: 6rem;
     }
+
+    .menu .menu_wrapper {
+        padding: 12.6rem 4rem 4rem 4rem;
+    }
+
+    .menu .menu_wrapper .menu_list .menu_list_item a {
+        font-size: 4rem;
+    }
+
+    .menu_close {
+        padding: 1rem;
+    }
 }
+
